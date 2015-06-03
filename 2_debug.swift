@@ -5,4 +5,3 @@ println(msg)
 print("数字は\(num1)です。")
 println("-----")
 println(array)
-
