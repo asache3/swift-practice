@@ -28,7 +28,7 @@ println("f2の値は\(f2), g2の値は\(g2)")
 let h = true
 let i = false
 println("h AND i => \(h && i)")
-println("h OR b => \(h || i)")
+println("h OR i => \(h || i)")
 println("NOT h => \(!h)")
 
 
