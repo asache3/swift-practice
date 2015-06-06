@@ -43,7 +43,7 @@ println(j)
 let l = arc4random_uniform(100)
 let m = arc4random_uniform(100)
 let bigger = (l>m) ? l : m
-println("lは\(l) mは¥(m) biggerは\(bigger)")
+println("lは\(l) mは\(m) biggerは\(bigger)")
 
 
 // レンジ演算子
