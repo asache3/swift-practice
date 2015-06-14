@@ -168,7 +168,7 @@ class HomeClass {
     var owner = "asache3"
 }
 
-class MyClass {
+class MyClass5 {
     lazy var home = HomeClass()
     
     func hello() {
@@ -182,7 +182,7 @@ class MyClass {
 
 
 // アクセス権
-private class MyClass5 {
+private class MyClass6 {
     private var msg = "ハロー"
     private func hello() {
         println(msg)
