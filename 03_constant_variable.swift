@@ -26,3 +26,12 @@ var kosu = 3
 var price = Double(tanka * kosu) * (1 + tax)
 var intPrice = Int(price)
 println(intPrice)
+
+
+// ダウンキャスト(Swift1.2~)
+let obj:AnyObject = "text"
+let str = obj as! String
+println(str)
+
+let optInt = obj as? Int
+println(optInt)
