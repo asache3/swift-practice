@@ -1,11 +1,11 @@
 import UIKit
 
 // 算術演算子
-let a = 1+3*2
-let b = 10/(4-2)
-let c = 5%3
-let d = -11%4
-let e = 5%1.6
+let a = 1 + 3 * 2
+let b = 10 / (4 - 2)
+let c = 5 % 3
+let d = -11 % 4
+let e = 5 % 1.6
 
 let ans1 = 2 + 10/4
 print(ans1)
@@ -59,7 +59,7 @@ for i in (1...5) {
 // 演算子のオーバーロード
 let num = 1 + 2
 let name = "田中" + "一郎"
-let colors = ["red", "blue"] + ["white", "block"]
+let colors = ["red", "blue"] + ["white", "black"]
 println(num)
 println(name)
 println(colors)
