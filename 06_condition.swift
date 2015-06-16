@@ -2,9 +2,9 @@ import UIKit
 
 // if文
 let tokuten = arc4random_uniform(100) + 1
-if tokuten<30 {
+if tokuten < 30 {
     println("がんばりましょう")
-} else if tokuten<80 {
+} else if tokuten < 80 {
     println("合格です")
 } else {
     println("素晴らしい！")
@@ -42,9 +42,9 @@ default:
 
 let size2 = (45, 40, 100)
 switch size2 {
-case let (width, height, _) where (width>=60)||(height>=60):
+case let (width, height, _) where (width >= 60)||(height >= 60):
     println("規定外：幅高さのどちらかが60以上")
-case let (_, _, weight) where (weight>80):
+case let (_, _, weight) where (weight > 80):
     println("規定外：重さ80以上")
 default:
     println("規定サイズ内")
