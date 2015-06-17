@@ -1,14 +1,11 @@
 import UIKit
 
 // 定数 
-let tax1 = 0.08
-let tax2:Double = 0.08
-let theLanguage1 = "Swift"
-let theLanguage2:String = "Swift"
+let tax = 0.08
+let theLanguage:String = "Swift"
 let now = NSDate()
 let logoCOLOR = UIColor(red:0.16, green:0.73, blue:0.61, alpha:1)
-let mens1 = 100, womens1 = 200
-let mens2:Int = 100, womens2:Int = 200
+let mens:Int = 100, womens:Int = 200
 
 
 // 変数
@@ -28,7 +25,7 @@ var intPrice = Int(price)
 println(intPrice)
 
 
-// ダウンキャスト(Swift1.2~)
+// ダウンキャスト(Swift 1.2~)
 let obj:AnyObject = "text"
 let str = obj as! String
 println(str)

@@ -1,12 +1,12 @@
 // コメント
-var msg = "おはよう"
+var msg = "Hello"
 println(msg) // コメント
 
 /* コメント */
-var msg1 = "おはよう"
-var msg2 /* 途中のコメント */ = "おやすみなさい"
+var msg1 = "Hello"
+var msg2 /* 途中のコメント */ = "Bye"
 
 /* 複数行コメント
-var msg3 = "こんにちは"
-var msg4 = "こんばんは"
+var msg3 = "Hello"
+var msg4 = "Bye"
 */

@@ -17,7 +17,7 @@ let price3 = kingaku1.0
 let tax3 = kingaku1.1
 println(price3 + tax3)
 
-var user1 = ("鈴木", 29)
+var user1 = ("Tom", 29)
 user1.1 = 30
 println(user1)
 
@@ -30,7 +30,7 @@ println(seikyugaku)
 
 // ラベルと型を指定したタプルを作る
 var user2:(name:String, age:Int, isPass:Bool)
-user2.name = "高田"
+user2.name = "Bob"
 user2.age = 23
 user2.isPass = true
 println(user2)
