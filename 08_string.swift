@@ -1,29 +1,29 @@
 import UIKit
 
 // String
-let message = "ハロー"
-let hello = String("ハロー")
+let message = "Hi"
+let hello = String("Hello")
 println(hello)
 
-let str = "あいうえお12345ABcde(^_^)"
+let str = "あいうえお12345ABcde"
 let num = count(str)
 println(num)
 
 let entries = 24
 let staff = 3
-let str1 = "参加者\(entries)人。"
-let str2 = "スタッフを含めると\(entries + staff)人です。"
+let str1 = "Entries \(entries)."
+let str2 = "\(entries + staff) including staffs."
 println(str1 + str2)
 
 
 // Stringの比較
 let str3 = "SWIFT"
 if (str3 == "Swift") {
-    println("Swiftと完全一致")
+    println("Match with Swift")
 } else if (str3.lowercaseString == "swift") {
-    println("大文字小文字を区別しなければ同じ")
+    println("Match wigh case ignored")
 } else {
-    println("全然違う")
+    println("Different")
 }
 
 
@@ -31,17 +31,17 @@ if (str3 == "Swift") {
 let kakaku:String = "240"
 let kosu:String = "2"
 let kingaku = kakaku.toInt()! * kosu.toInt()!
-println("\(kingaku)円")
+println("\(kingaku) Yen")
 
 let r = 120
 let pai = "3.14"
 let ensyu:Float = Float(2*r) * (pai as NSString).floatValue
-println("円周の長さは\(ensyu)")
+println("Circumferential: \(ensyu)")
 
 let weight = 135.5
 let package = 10.2
-let str4 = "内容量" + weight.description + "グラム"
-let str5 = "容器の重さを含めると" + (weight + package).description + "グラム"
+let str4 = "Content " + weight.description + " gram"
+let str5 = "Including package, " + (weight + package).description + "gram"
 println(str4 + "\n" + str5)
 
 
@@ -52,12 +52,12 @@ let range:Range? = str6.rangeOfString(word)
 if let theRange = range {
     let start:String.Index = theRange.startIndex
     let end:String.Index = theRange.endIndex
-    println("rangeの\(range!)は\(str6[theRange])")
-    println("startの\(start)番は\(str6[start])")
-    println("endの\(end)番は\(str6[end])")
-    println("start..<endの範囲は、\(str[start..<end])")
+    println("range \(range!) is \(str6[theRange])")
+    println("start \(start) is \(str6[start])")
+    println("end \(end) is \(str6[end])")
+    println("start..<end is \(str[start..<end])")
 } else {
-    println("「\(word)」は見つかりませんでした。")
+    println("\(word) was not found.")
 }
 
 let str7 = "あいうえおカキクケコ"
@@ -90,11 +90,11 @@ if findIndex != nil {
 
 
 // Stringの接頭辞と接尾辞
-let itemList = ["adi-123-S", "nik-90-M", "adi-33x-M", "nor-dee2-S"]
+let itemList = ["a-1-S", "n-9-M", "n-2-S"]
 var markAdi:[String] = []
 var sizeS:[String] = []
 for item in itemList {
-    if item.hasPrefix("adi") {
+    if item.hasPrefix("a") {
         markAdi.append(item)
     }
     if item.hasSuffix("S") {
@@ -108,7 +108,7 @@ for item in itemList {
 // Stringの挿入と削除
 var abc:NSMutableString = "ABCDE"
 abc.appendString("123")
-abc.insertString("あいうえお", atIndex: 3)
+abc.insertString("auieo", atIndex: 3)
 println(abc)
 
 var str10:NSMutableString = "ABCDE12345"

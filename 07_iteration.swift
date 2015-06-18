@@ -10,15 +10,15 @@ for _ in 1...15 {
     print("\(num),")
 }
 
-let numList = [3, 2, 6, 5, 8, 7, 9]
+let numList = [3, 2, 6, 5, 8]
 var sum = 0
 for num in numList {
     sum += num
 }
-println("合計 \(sum)")
+println("Sum: \(sum)")
 
-let sizelist = ["XS", "SS", "S", "M", "L", "LL", "XL"]
-print("大きい順：")
+let sizelist = ["S", "M", "L"]
+print("Descending order: ")
 for(var i=sizelist.count ; i>0; i--) {
     let size = sizelist[i-1]
     print("\(size), ")
@@ -28,11 +28,11 @@ for(var i=sizelist.count ; i>0; i--) {
 // whileループ
 var tickets = 5
 var power = 30
-while (tickets>0)&&(power<100) {
+while (tickets > 0) && (power < 100) {
     tickets--
     power += 20
 }
-println("power \(power), 残チケット \(tickets)")
+println("Power: \(power), Ticket: \(tickets)")
 
 
 // do-while文
