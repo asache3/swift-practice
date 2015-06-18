@@ -8,3 +8,7 @@ println(msg)
 print("Number is \(num1).")
 println("-----")
 println(array)
+
+// アサーション
+var num2 = 0
+assert(num2 != 0, "num2 should not be 0")
