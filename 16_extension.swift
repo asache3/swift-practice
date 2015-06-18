@@ -1,3 +1,4 @@
+//クラスの拡張
 class Human {
     let name:String
     var log:Double = 0.0
@@ -8,10 +9,10 @@ class Human {
     
     func walk(km:Double) {
         log += km
-        println("\(log)km歩きます！")
+        println("Walk \(log)km!")
     }
     func kmlog() {
-        println("\(log)km進みました。")
+        println("Go \(log)km.")
     }
 }
 
@@ -26,20 +27,20 @@ class Hero:Human {
     
     func fly(km:Double) {
         log += km
-        println("\(km)km飛びます！")
+        println("Fly \(km)km!")
     }
     // メソッドのオーバーライド
     override func walk(km: Double) {
         if isHyperMode {
             log += km*10
-            println("\(km)kmx10倍歩きます！")
+            println("Walk \(km)kmx10 times!")
         } else {
             super.walk(km)
         }
     }
 }
 
-let myHero = Hero(name: "クラークケント", heroName: "スーパーマン")
+let myHero = Hero(name: "Kent", heroName: "Superman")
 println(myHero.name)
 println(myHero.heroName)
 
@@ -56,13 +57,13 @@ myHero.kmlog()
 // 継承やオーバーライドを制限する
 final class MyClass {
     func hello() {
-        println("ハロー")
+        println("Hello")
     }
 }
 
 class Message {
     final func hello() {
-        println("ハロー")
+        println("Hello")
     }
 }
 
@@ -85,12 +86,12 @@ class MyGame:GameProtocol {
     
     func hit() {
         total += 10
-        println("ヒットしました")
+        println("Hit")
     }
     
     func miss() {
         total /= 2
-        println("ミスった！")
+        println("Miss!")
     }
 }
 
@@ -109,16 +110,16 @@ class MyClass2 {
     }
     
     func hello() {
-        println("ハロー、\(name)さん")
+        println("Hello, \(name)")
     }
 }
 
 extension MyClass2 {
     func thankYou() {
-        println("\(name)さん、ありがとう")
+        println("Thank you \(name)")
     }
 }
 
-let myObj = MyClass2(name: "遠藤")
+let myObj = MyClass2(name: "Endo")
 myObj.hello()
 myObj.thankYou()

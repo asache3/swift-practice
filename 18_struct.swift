@@ -18,7 +18,7 @@ println((theBox.width, theBox.height, theBox.color))
 
 redBox.width = 90
 redBox.color = "blue"
-println("幅\(redBox.width)、高さ\(redBox.height)、色\(redBox.color)")
+println("Width: \(redBox.width), Height: \(redBox.height), Color: \(redBox.color)")
 
 
 // イニシャライザのある構造体
@@ -31,7 +31,7 @@ struct Box {
         self.width = width
         self.height = height
         
-        if(width+height)<250 {
+        if(width+height) < 250 {
             size = "M"
         } else {
             size = "L"
@@ -41,8 +41,8 @@ struct Box {
 
 let box1 = Box(width: 120, height: 80)
 let box2 = Box(width: 150, height: 120)
-println("box1のサイズは\(box1.size)")
-println("box2のサイズは\(box2.size)")
+println("box1 size is \(box1.size)")
+println("box2 size is \(box2.size)")
 
 
 // 関数がある構造体
@@ -57,7 +57,7 @@ struct Lot {
 
 let lot4 = Lot(kosu: 4, tanka: 780)
 let price4 = lot4.price()
-println("4個入り\(price4)円")
+println("\(price4) Yen")
 
 
 // subscriptを定義した構造体

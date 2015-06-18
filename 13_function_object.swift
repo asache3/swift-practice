@@ -10,11 +10,11 @@ println(kingaku)
 
 // 関数オブジェクトを引数にする
 func hello(user:String) -> String {
-    return ("\(user)さん、ハロー")
+    return ("Hello, \(user)")
 }
 
 func bye(user:String) -> String {
-    return ("\(user)さん、バイ！")
+    return (Bye, "\(user)")
 }
 
 func command(someFunc:String -> String, user:String) -> String {
@@ -23,8 +23,8 @@ func command(someFunc:String -> String, user:String) -> String {
 }
 
 let cmds = [hello, bye]
-let msg1 = command(cmds[0], "田中")
-let msg2 = command(cmds[1], "佐藤")
+let msg1 = command(cmds[0], "Tanaka")
+let msg2 = command(cmds[1], "Sato")
 println(msg1)
 println(msg2)
 
@@ -39,7 +39,7 @@ func priceFunc(#age:Int) -> (Int) -> Int {
         return 600 * kosu
     }
     
-    if age<12 {
+    if age < 12 {
         return kidsPrice
     } else {
         return adultPrice
@@ -49,6 +49,7 @@ func priceFunc(#age:Int) -> (Int) -> Int {
 let age10Func = priceFunc(age: 10)
 var price = age10Func(2)
 println(price)
+
 let age16Func = priceFunc(age: 16)
 price = age16Func(2)
 println(price)

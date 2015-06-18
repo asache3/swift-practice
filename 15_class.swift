@@ -2,7 +2,7 @@ import UIKit
 
 // クラスの定義
 class MyClass {
-    var msg = "ハロー"
+    var msg = "Hello"
     
     func hello() {
         println(msg)
@@ -11,7 +11,7 @@ class MyClass {
 
 let myObj = MyClass()
 myObj.hello()
-myObj.msg = "ハーイ！元気？"
+myObj.msg = "Hi"
 myObj.hello()
 
 
@@ -20,7 +20,7 @@ class MyClass2 {
     let msg:String
     let name:String?
     
-    init(msg:String = "ハロー") {
+    init(msg:String = "Hello") {
         self.msg = msg
         self.name = nil
     }
@@ -32,7 +32,7 @@ class MyClass2 {
     func hello() {
         var helloMsg:String
         if let user = name {
-            helloMsg = user + "さん。" + msg
+            helloMsg = user + msg
         } else {
             helloMsg = msg
         }
@@ -40,10 +40,10 @@ class MyClass2 {
     }
 }
 
-let myObj2 = MyClass2(msg: "こんにちは")
+let myObj2 = MyClass2(msg: "Hello")
 myObj2.hello()
 
-let myObj3 = MyClass2(msg: "こんにちは", name: "桜子")
+let myObj3 = MyClass2(msg: "Hello", name: "Emily")
 myObj3.hello()
 
 
@@ -57,19 +57,19 @@ class MyClass3 {
         self.name = name
     }
     
-    convenience init(msg:String = "ハロー") {
-        self.init(msg:msg, name:"匿名")
+    convenience init(msg:String = "Hello") {
+        self.init(msg:msg, name:"Anonymous")
     }
     
     func hello() {
-        let helloMsg = name + "さん。" + msg
+        let helloMsg = name + msg
         println(helloMsg)
     }
 }
 
 let myObj4 = MyClass3()
-let myObj5 = MyClass3(msg: "こんにちは")
-let myObj6 = MyClass3(msg: "やあ！", name: "山田")
+let myObj5 = MyClass3(msg: "Hello")
+let myObj6 = MyClass3(msg: "Hi!", name: "Yamada")
 myObj4.hello()
 myObj5.hello()
 myObj6.hello()
@@ -99,14 +99,14 @@ class MyClass4 {
     }
 }
 
-MyClass4.msg = "Swift面白い！"
+MyClass4.msg = "Swift is fun"
 let myMsg = MyClass4.msg
 
 
 // クラスメソッド
 class Message {
     class func GoodMorning() -> String {
-        return "おはようございます"
+        return "Good Morning."
     }
 }
 
@@ -128,12 +128,12 @@ class Circle {
 }
 
 var myCircle = Circle()
-println("半径\(myCircle.radius)")
-println("面積\(myCircle.area)")
+println("Radius: \(myCircle.radius)")
+println("Area: \(myCircle.area)")
 
 myCircle.area = 2
-println("半径\(myCircle.radius)")
-println("面積\(myCircle.area)")
+println("Radius: \(myCircle.radius)")
+println("Area: \(myCircle.area)")
 
 
 // プロパティオブザーバー
@@ -148,7 +148,7 @@ class Player {
         didSet {
             if oldValue != level {
                 ++times
-                println("\(times)回目の更新")
+                println("\(times) times")
             }
         }
     }
@@ -172,7 +172,7 @@ class MyClass5 {
     lazy var home = HomeClass()
     
     func hello() {
-        println("ハロー")
+        println("Hello")
     }
     func who() {
         // ここでhomeが初期化される
@@ -183,7 +183,7 @@ class MyClass5 {
 
 // アクセス権
 private class MyClass6 {
-    private var msg = "ハロー"
+    private var msg = "Hello"
     private func hello() {
         println(msg)
     }

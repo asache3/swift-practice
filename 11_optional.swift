@@ -1,15 +1,15 @@
 // オプショナル
-var msg:String? = "ハロー"
+var msg:String? = "Hello"
 println(msg)
 msg = nil
 
-var msg1:Optional<String> = "ハロー"
-var newMsg = msg1! + "ワールド"
+var msg1:Optional<String> = "Hello"
+var newMsg = msg1! + " World"
 println(newMsg)
 
 var count:Int?
 let value = 250 * (count ?? 2)
-println("\(value)円です。")
+println("\(value) Yen")
 
 
 // オプショナルバインディング
@@ -20,7 +20,7 @@ for (_, value) in dic {
         sum += num
     }
 }
-println("数値の合計は\(sum)")
+println("Sum is \(sum)")
 
 
 // オプショナルチェイニング

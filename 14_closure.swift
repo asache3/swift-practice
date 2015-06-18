@@ -8,7 +8,7 @@ println(ans)
 
 
 // クロージャを引数で受け取る関数
-let numbers = [4, 7, 2, 9]
+let numbers = [4, 7, 2]
 let array1 = map(numbers, {(let v:Int) -> Int in
     return v*2
 })
@@ -18,12 +18,12 @@ let array2 = map(numbers){(let v:Int) -> Int in
     return v*2
 }
 
-let array3 = map(numbers){v in v*2}
-let array4 = map(numbers){$0*2}
+let array3 = map(numbers){v in v * 2}
+let array4 = map(numbers){$0 * 2}
 
 
 // sorted()関数での比較方法をクロージャで指定する
-let stringArray = ["orange", "Apple", "lemon", "Peach"]
+let stringArray = ["orange", "Apple", "lemon"]
 let sortedStringArray1 = stringArray.sorted {
     $0.uppercaseString < $1.uppercaseString
 }

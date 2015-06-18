@@ -16,15 +16,15 @@ func sum(numbers:Double...) -> Double {
     return total
 }
 
-let ans2 = sum(4,3,5,2,8,6)
+let ans2 = sum(4, 3, 5)
 println(ans2)
 
-func message(who:String = "お客") -> String {
-    return who + "様、こんにちは"
+func message(who:String = "customer") -> String {
+    return "Hello, " + who
 }
 
 var msg1 = message()
-var msg2 = message(who: "田中")
+var msg2 = message(who: "Tanaka")
 println("msg1 \(msg1)")
 println("msg2 \(msg2)")
 
@@ -32,7 +32,7 @@ println("msg2 \(msg2)")
 // 引数を変数宣言する
 func price(var yen:Int) -> Int {
     let tax = 1.08
-    yen = Int(floor(Double(yen)*tax))
+    yen = Int(floor(Double(yen) * tax))
     return yen
 }
 
@@ -43,8 +43,8 @@ println(ans3)
 // 引数に外部引数名をつける
 func bmi(weight kg:Double, height cm:Double) -> Double {
     if cm == 0 { return -1 }
-    var result = kg/pow(cm*0.01, 2)
-    result = round(result*10)/10.0
+    var result = kg/pow(cm * 0.01, 2)
+    result = round(result * 10) / 10.0
     return result
 }
 
@@ -61,20 +61,20 @@ func arrayByInt(#array:Array<Int>, num:Int) -> Array<Int> {
     return result
 }
 
-let ans4 = arrayByInt(array: [1,2,3], 3)
+let ans4 = arrayByInt(array: [1, 2, 3], 3)
 println(ans4)
 
 
 // 複数の戻り値がある関数
 func result(#kokugo:Int, sansu:Int, eigo:Int) -> (total:Int, average:Double) {
     let total = kokugo + sansu + eigo
-    var average = Double(total)/3
-    average = round(average*10)/10
+    var average = Double(total) / 3
+    average = round(average * 10) / 10
     return (total, average)
 }
 
 let exam = result(kokugo: 65, 68, 72)
-println("合計\(exam.total) 平均\(exam.average)")
+println("Sum: \(exam.total) Average: \(exam.average)")
 
 
 // 関数のオーバーロード
@@ -98,7 +98,7 @@ println(ans6)
 println(ans7)
 
 
-// ジェネリックな関数
+// ジェネリック関数
 func makeArray<T>(items:T ...) -> [T] {
     var array = [T]()
     for item in items {
@@ -107,7 +107,7 @@ func makeArray<T>(items:T ...) -> [T] {
     return array
 }
 
-let nums = makeArray(3,5,7,2,8)
+let nums = makeArray(3, 5, 7, 2, 8)
 let colors = makeArray("red", "blue", "green")
 println(nums)
 println(colors)

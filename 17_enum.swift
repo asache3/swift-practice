@@ -18,13 +18,13 @@ enum Prize:Int {
     func description() -> String {
         switch self {
         case .Gold:
-            return "優勝"
+            return "First"
         case .Silver:
-            return "準優勝"
+            return "Second"
         case .Bronse:
-            return "準々優勝"
+            return "Third"
         case .Four, .Five:
-            return "入賞"+String(self.rawValue)+"位"
+            return String(self.rawValue)
         }
     }
 }
