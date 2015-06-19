@@ -17,10 +17,10 @@ size = 23.5
 
 
 // 型キャスト
-let tax = 0.08
+let tax1 = 0.08
 var tanka = 120
 var kosu = 3
-var price = Double(tanka * kosu) * (1 + tax)
+var price = Double(tanka * kosu) * (1 + tax1)
 var intPrice = Int(price)
 println(intPrice)
 
